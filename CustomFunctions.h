@@ -9,9 +9,21 @@
 #define WIDTH 500.0
 
 #define WHITE (1.0, 1.0, 1.0)
+#define BLACK (0.0, 0.0, 0.0)
+#define RED (1.0, 0.0, 0.0)
+#define GREEN (0.0, 1.0, 0.0)
+#define BLUE (0.0, 0.0, 1.0)
 
 GLdouble mean(GLdouble d1, GLdouble d2) {
     return (d1 + d2) / 2.0;
+}
+
+void glDisk(GLdouble x, GLdouble y, GLdouble r) {
+    glBegin(GL_POLYGON);
+    for (GLdouble i = 0.0; i < 2 * PI; i += 0.1){
+        glVertex2f((r * cos(i)) + x, (r * sin(i)) + y);
+    }
+    glEnd();
 }
 
 void glCircle(GLdouble x, GLdouble y, GLdouble r) {

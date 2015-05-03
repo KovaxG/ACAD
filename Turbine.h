@@ -15,7 +15,7 @@ public:
         radius = r;
     }
 
-    void initialize(GLdouble x, GLdouble y, GLdouble r) {
+    void placement(GLdouble x, GLdouble y, GLdouble r) {
         setMidPoint(Point(x, y));
         setRadius(r);
         spin = 0.0;
